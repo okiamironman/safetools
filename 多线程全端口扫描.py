@@ -1,7 +1,8 @@
 
 import socket,sys,threading,queue
 
-# 多线程全端口扫描，参数模式，自定义ip,线程数
+# 多线程全端口扫描，参数模式，可自定义线程数
+# 第1个参数为要扫描的IP，第2个参数为自定义线程数
 
 def full_port_scan(ip):
     while not q.empty():
