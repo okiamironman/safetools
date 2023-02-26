@@ -5,7 +5,6 @@ import socket,sys
 # 输入命令发送执行
 # 回显命令执行结果
 # 输入q关闭连接,重新运行程序输入被控端的IP和端口即可继续连接(前提是输入q结束的连接)
-import sys
 
 ip,port=input('请输入被控端的ip和port，以空格分开: ').split()
 port=int(port)
