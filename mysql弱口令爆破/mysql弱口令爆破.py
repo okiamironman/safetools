@@ -4,6 +4,7 @@ import pymysql,os
 
 # 可自定义密码文档
 # 可在此基础上进行二次开发，列如引入代理池，增加用户名爆破等。
+# 爆破条件:mysql服务端允许root远程登录
 
 def mysql_check(ip,password):
     try:
